@@ -13,6 +13,7 @@ interface ButtonProps {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
   loading?: boolean;
+  download?: boolean | string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -27,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   type = 'button',
   loading = false,
+  download,
 }) => {
   const baseStyles = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
@@ -62,8 +64,9 @@ export const Button: React.FC<ButtonProps> = ({
         className={classes}
         whileHover={{ scale: disabled ? 1 : 1.05 }}
         whileTap={{ scale: disabled ? 1 : 0.95 }}
-        target={href.startsWith('http') ? '_blank' : undefined}
-        rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+        target={href.startsWith('http') && !download ? '_blank' : undefined}
+        rel={href.startsWith('http') && !download ? 'noopener noreferrer' : undefined}
+        download={download}
       >
         {content}
       </motion.a>

@@ -122,6 +122,7 @@ export const About: React.FC = () => {
             variant="primary"
             icon={<FiDownload />}
             href={personalInfo.resume}
+            download
           >
             Download Resume
           </Button>
