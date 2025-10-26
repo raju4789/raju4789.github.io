@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { Layout } from './components/layout/Layout';
 import { Hero } from './components/sections/Hero';
@@ -49,7 +49,7 @@ function App() {
         <meta property="og:title" content={`${personalInfo.name} - ${personalInfo.title}`} />
         <meta property="og:description" content={personalInfo.tagline} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={personalInfo.social.portfolio} />
+        <meta property="og:url" content="https://raju4789.github.io" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
