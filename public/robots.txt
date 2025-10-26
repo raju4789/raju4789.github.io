@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raju4789.github.io/sitemap.xml
+
