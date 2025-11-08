@@ -186,9 +186,13 @@ All your content is stored in separate data files for easy customization:
 
 3. **Deploy**
    ```bash
-   npm run build
    npm run deploy
    ```
+   
+   **Note:** The deploy command automatically:
+   - ✅ Builds your project (`npm run build`)
+   - ✅ Includes `.nojekyll` file (fixes MIME type errors)
+   - ✅ Pushes to `gh-pages` branch
 
 4. **Configure GitHub Pages**
    - Go to: Repository → Settings → Pages
@@ -351,6 +355,21 @@ npm run build
 - ✅ Check `base` path in `vite.config.ts`
 - ✅ Verify `gh-pages` branch exists
 - ✅ Confirm GitHub Pages source settings
+
+**Issue: MIME type error on GitHub Pages**
+```
+Failed to load module script: Expected a JavaScript module script 
+but the server responded with a MIME type of "application/octet-stream"
+```
+**Solution:** This is already fixed! The template includes:
+- ✅ `.nojekyll` file in `public/` folder (bypasses Jekyll processing)
+- ✅ Deploy script with `-t` flag (includes dotfiles in deployment)
+
+If you still see this error:
+1. Verify `.nojekyll` exists in `public/` folder
+2. Redeploy: `npm run deploy`
+3. Clear browser cache (Ctrl+Shift+R / Cmd+Shift+R)
+4. Wait 2-3 minutes for GitHub Pages to update
 
 ---
 
