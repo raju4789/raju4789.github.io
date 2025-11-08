@@ -20,7 +20,9 @@ export const About: React.FC = () => {
   useEffect(() => {
     if (isIntersecting) {
       personalInfo.stats.forEach((stat, index) => {
-        const target = parseInt(stat.value.replace(/\D/g, ''));
+        // Extract numeric value (handle decimals like 5.6)
+        const numericValue = stat.value.replace(/[^\d.]/g, '');
+        const target = parseFloat(numericValue);
         const duration = 2000;
         const steps = 60;
         const increment = target / steps;
@@ -38,7 +40,7 @@ export const About: React.FC = () => {
           } else {
             setCounters((prev) => {
               const newCounters = [...prev];
-              newCounters[index] = Math.floor(current);
+              newCounters[index] = current;
               return newCounters;
             });
           }
@@ -141,7 +143,11 @@ export const About: React.FC = () => {
             >
               <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                {counters[index]}
+                {stat.value.includes('$') && '$'}
+                {stat.value.includes('.') 
+                  ? counters[index].toFixed(1)
+                  : Math.floor(counters[index])}
+                {stat.value.includes('M') && 'M'}
                 {stat.value.includes('+') && '+'}
               </div>
               <div className="text-sm text-gray-600 dark:text-gray-400">
