@@ -22,6 +22,7 @@
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Quick Start](#quick-start)
+- [Build Your Portfolio](#-build-your-portfolio)
 - [Customization](#-customization)
 - [Deployment](#-deployment)
 - [Project Structure](#-project-structure)
@@ -147,6 +148,44 @@ A **production-ready portfolio template** for developers and tech professionals.
    ```bash
    npm run deploy
    ```
+
+---
+
+## 🛠 Build Your Portfolio
+
+Follow these seven steps to launch your personal site within an hour:
+
+1. **Fork** this repository and clone it locally  
+   ```bash
+   git clone https://github.com/<your-username>/<your-username>.github.io.git
+   cd <your-username>.github.io
+   npm install
+   ```
+2. **Personalize** the three core data files  
+   - `src/data/personalInfo.ts` — name, bio, socials, resume path  
+   - `src/data/experience.ts` — roles, achievements, tech stack  
+   - `src/data/skills.ts` — skill categories, proficiency, years of experience
+3. **Add assets**  
+   - Replace `public/assets/resume.pdf` with your resume  
+   - Update images or favicons in `public/assets/`
+4. **Preview locally**  
+   ```bash
+   npm run dev
+   ```
+   Visit `http://localhost:3000` and iterate on copy, imagery, and colors.
+5. **Fine‑tune content**  
+   - Update testimonials (`src/data/testimonials.ts`) or sections inside `src/components/sections/`  
+   - Adjust theme colors in `tailwind.config.js`
+6. **Run quality checks** (optional but recommended)  
+   ```bash
+   npm run build
+   npm run lint
+   ```
+7. **Deploy to GitHub Pages**  
+   ```bash
+   npm run deploy
+   ```
+   GitHub Pages uses the built-in workflow to publish from the `gh-pages` branch—no extra setup required.
 
 ---
 

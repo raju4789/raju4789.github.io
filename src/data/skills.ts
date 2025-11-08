@@ -52,16 +52,16 @@ export const skillsData: SkillCategory[] = [
       },
       {
         name: "Node.js",
-        level: 20,
+        level: 80,
         icon: "🟢",
         yearsOfExperience: 2,
         description: "Backend development with Node.js and Express"
       },
       {
         name: "Python",
-        level: 10,
+        level: 40,
         icon: "🐍",
-        yearsOfExperience: 1,
+        yearsOfExperience: 2,
         description: "Automation scripts and data analysis tools"
       }
     ]
@@ -94,7 +94,7 @@ export const skillsData: SkillCategory[] = [
         name: "HTML5 & CSS3",
         level: 60,
         icon: "🌐",
-        yearsOfExperience: 10,
+        yearsOfExperience: 6,
         description: "Semantic HTML and modern CSS techniques"
       }
     ]
@@ -132,7 +132,7 @@ export const skillsData: SkillCategory[] = [
       },
       {
         name: "MongoDB",
-        level: 20,
+        level: 40,
         icon: "🍃",
         yearsOfExperience: 1,
         description: "NoSQL database for flexible data storage"
