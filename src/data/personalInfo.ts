@@ -12,7 +12,7 @@ export const personalInfo = {
     ]
   },
   location: "Bangkok, Thailand",
-  email: "narasimha4789@gmail.com",
+  email: "raju.methuku.career@gmail.com",
   phone: "+66 0971061627 / +91 7697129711",
   availability: "Currently employed at Agoda but open to exciting opportunities",
   social: {

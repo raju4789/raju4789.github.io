@@ -20,7 +20,7 @@ export const SOCIAL_LINKS = {
   github: 'https://github.com/raju4789',
   linkedin: 'https://linkedin.com/in/raju-m-l-n',
   medium: 'https://medium.com/@narasimha4789',
-  email: 'mailto:narasimha4789@gmail.com',
+  email: 'mailto:raju.methuku.career@gmail.com',
 };
 
 export const ANIMATION_DURATION = {
@@ -64,7 +64,7 @@ export const CONSOLE_MESSAGE = `
 ║   I see you're checking out the console.                ║
 ║   Want to work together? Let's connect!                 ║
 ║                                                          ║
-║   📧 narasimha4789@gmail.com                            ║
+║   📧 raju.methuku.career@gmail.com                      ║
 ║   🔗 https://github.com/raju4789                        ║
 ║   💼 https://linkedin.com/in/raju-m-l-n                 ║
 ║                                                          ║
